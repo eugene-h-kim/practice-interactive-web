@@ -1,0 +1,38 @@
+@keyframes rotation {   /* 등록할 애니메이션 모션 이름을 rotation으로 만들고 */
+  0% {   /* 모션의 시작 지점 */
+    transform: rotate(0deg);  /* 시작 지점 속성값 */
+  }
+  100% {  /* 모션의 끝 지점 */
+    transform: rotate(360deg);   /* 끝 지점 속성값 */
+  }
+}
+
+article {
+  width: 400px;
+  height: 400px;
+  background: blue;
+  margin: 100px auto;
+  animation-name: rotation;   /* @keyframes 의 애니메이션 이름 rotation */
+  animation-duration: 2s;   /* 한 세트 지속 시간 */
+  animation-timing-function: linear;   /* 가속도는 등속 */
+  animation-iteration-count: 2;   /* 반복 횟수 */
+  animation-delay: 0s;   /* 지연 시간 */
+}
+
+article {
+  width: 400px;
+  height: 400px;
+  background: blue;
+  margin: 100px auto;
+  animation-name: rotation;   /* @keyframes 의 애니메이션 이름 rotation */
+  animation-duration: 2s;   /* 한 세트 지속 시간 */
+  animation-timing-function: linear;   /* 가속도는 등속 */
+  animation-iteration-count: infinite;   /* 반복 횟수 */
+  animation-delay: 0s;   /* 지연 시간 */
+  animation-play-state: running;
+  transform: rotate(50deg);
+}
+
+article:hover {
+  animation-play-state: paused;
+}
